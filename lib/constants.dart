@@ -1,0 +1,1 @@
+const ApiUrl = "https://b498-34-73-128-36.ngrok-free.app/predict";

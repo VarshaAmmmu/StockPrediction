@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:stockprediction/constants.dart';
 import 'package:yahoo_finance_data_reader/yahoo_finance_data_reader.dart';
 import 'package:intl/intl.dart';
 import 'dart:async';
@@ -487,7 +488,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     }
 
     var request = http.Request(
-        'POST', Uri.parse('https://b498-34-73-128-36.ngrok-free.app/predict'));
+        'POST', Uri.parse(ApiUrl));
     request.body = json.encode({"symbol": symbol, "horizon": apiHorizon});
     request.headers.addAll(headers);
 
